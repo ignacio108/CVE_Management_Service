@@ -1,9 +1,8 @@
-# TFG-node-server
-Servidor de node que atiende a las APIs y crea unas nuevas, utilizando un servidor de nodejs y una base de datos nosql mongodb
+# Extra Information
+Node server that serves the APIs and creates new ones, using a nodejs server and a nosql mongodb database.
 
 
-
-Para iniciar el contenedor de la base de datos(Hacerlo desde el directorio raiz (versiones))
+To start the database container (Do it from the root directory (versions))
 
 
 docker run -d -p 27017:27017 -v $(pwd)/mongodb-volume:/data/db --name mongodb \
@@ -12,12 +11,12 @@ docker run -d -p 27017:27017 -v $(pwd)/mongodb-volume:/data/db --name mongodb \
 	mongo:latest
 
 
-Para crear la imagen de node.js
+To create the node.js image
 
 docker build -t ~/nodejs-image:1.0 .
 
 
-Para conectarse al bash del contendor
+To connect to the bash of the contender
 
 docker exec -it mongodb mongosh \
 		-u MONGO_INITDB_ROOT_USERNAME \
