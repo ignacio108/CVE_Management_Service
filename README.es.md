@@ -1,6 +1,15 @@
 # CVE_Management_Service
 Application to manage the vulnerabilities from the NVD realted to networking devices
 
+
+El principal objetivo de este proyecto será el mejorar el proceso de endurecimiento informático
+relacionado con el estado del software de los equipos de red. El primer procedimiento será una
+investigación y estudio sobre la existencia y viabilidad de un repositorio sobre vulnerabilidades,
+compatibilidad, estado del software y hardware de los equipos de red de Cisco, Aruba, Allied, Extreme
+Networks, Fortinet y Comware. Finalmente, se diseñará e implementará un base de datos con toda la
+información obtenida, y a su vez se creará un API para una posible implementación de este servicio en
+aplicaciones de terceros.
+
 ![Application architecture](img/image.png)
 
 ## Requisitos:
