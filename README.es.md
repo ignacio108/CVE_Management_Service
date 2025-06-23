@@ -1,5 +1,5 @@
 # CVE_Management_Service
-Application to manage the vulnerabilities from the NVD realted to networking devices
+Application to manage the vulnerabilities from the NVD related to networking devices
 
 
 El principal objetivo de este proyecto será el mejorar el proceso de endurecimiento informático
