@@ -1,0 +1,43 @@
+version: '3.1'
+
+services:
+  web:
+    build: 
+      context: ./node-express
+      dockerfile: ./Dockerfile
+    command: npm start 
+    networks:
+      - express-mongodb
+    ports: 
+      - 3000:3000
+    restart: unless-stopped
+    environment:
+      - PERSONAL_NVD_API_KEY
+      - MONGO_INITDB_ROOT_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD
+      - MONGO_CONNECTION_DOCKER=monogodbalias
+    depends_on:
+      - mongodb-server
+
+  mongodb-server:
+    image: mongo:latest
+    restart: unless-stopped
+    networks:
+      express-mongodb:
+        aliases:
+          - monogodbalias
+
+    ports: 
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD
+    volumes: 
+      - type: bind
+        source: ./mongodb-volume
+        target: /data/db
+networks:
+  express-mongodb:
+    driver: bridge
+
+

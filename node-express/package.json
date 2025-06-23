@@ -1,0 +1,41 @@
+{
+  "name": "cve_management_service",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "node ./test/test.js",
+    "test-api": "node ./test/test_api.js"
+  },
+  "dependencies": {
+    "async": "^3.2.5",
+    "axios": "^1.6.8",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.4.5",
+    "escape-regexp": "^0.0.1",
+    "express": "~4.16.1",
+    "hashmap": "^2.4.0",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "mongoose": "^8.2.3",
+    "morgan": "~1.9.1",
+    "test": "^3.3.0",
+    "utf8": "^3.0.0"
+  },
+  "description": "Servidor de node que atiende a las APIs y crea unas nuevas",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ignacio108/CVE_Management_Service.git"
+  },
+  "author": "Ignacio Botella Lledin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ignacio108/CVE_Management_Service/issues"
+  },
+  "homepage": "https://github.com/ignacio108/CVE_Management_Servicer#readme"
+}
