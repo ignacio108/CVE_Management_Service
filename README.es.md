@@ -1,20 +1,26 @@
 # CVE_Management_Service
 Application to manage the vulnerabilities from the NVD realted to networking devices
 
-Requisitos:
+![Application architecture](img/image.png)
+
+## Requisitos:
 
     Crear un .env con las siguientes varibles de entorno:
+
+    Es necesario obtener un API-KEY a traves del siguiente url:
+
+    https://nvd.nist.gov/developers/request-an-api-key
 
     PERSONAL_NVD_API_KEY
     MONGO_INITDB_ROOT_USERNAME
     MONGO_INITDB_ROOT_PASSWORD
 
-Instalación:
+## Instalación:
 
     docker-compose up -d
 
 
-Volumen base de datos
+## Volumen base de datos
 
     -Path: 
         ~/mongodb-volume
@@ -25,7 +31,7 @@ Volumen base de datos
         Los cambios en la base de datos son persistentes
     
 
-Servidor web
+## Servidor web
 
     -Path: 
         ~/node-express
@@ -35,7 +41,7 @@ Servidor web
         Servidor encargado de recibir información de la NVD, realizar cambios en la mongodb y enviar dicha información al usuario.
         Para acceder a la información se deberá hacer una petición al puerto 3000 
 
-Peticiones de la API:
+## Peticiones de la API:
 
     GET /manufacturers
     GET /manufacturers/:manufacturerId
@@ -52,7 +58,7 @@ Peticiones de la API:
     PUT /update-db
 
 
-Ejemplo de petición con la versión CiscoIOS15.0(1)m, Recomendable seguir por orden
+## Ejemplo de petición con la versión CiscoIOS15.0(1)m, Recomendable seguir por orden
 
     https://localhost:3000/manufacturers
     https://localhost:3000/manufacturers/cisco
@@ -67,11 +73,11 @@ Ejemplo de petición con la versión CiscoIOS15.0(1)m, Recomendable seguir por o
     https://localhost:3000/update-cves-one-version/cisco/ios/15.0(1)m
     https://localhost:3000/update-db
 
-Versión
+## Versión
 
     v1.0
 
-Autor
+## Autor
 
     Ignacio Botella Lledin
 
