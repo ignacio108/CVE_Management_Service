@@ -17,7 +17,7 @@ Create an .env with the following environment variables:
 
 You need to obtain an API-KEY through the following url:
 
-    https://nvd.nist.gov/developers/request-an-api-key
+https://nvd.nist.gov/developers/request-an-api-key
 
     PERSONAL_NVD_API_KEY
     MONGO_INITDB_ROOT_USERNAME
