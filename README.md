@@ -13,11 +13,11 @@ be created for a possible implementation of this service in third party applicat
 
 ## Requirements:
 
-    Create an .env with the following environment variables:
+Create an .env with the following environment variables:
 
-    You need to obtain an API-KEY through the following url:
+You need to obtain an API-KEY through the following url:
 
-        https://nvd.nist.gov/developers/request-an-api-key
+    https://nvd.nist.gov/developers/request-an-api-key
 
     PERSONAL_NVD_API_KEY
     MONGO_INITDB_ROOT_USERNAME
@@ -29,35 +29,35 @@ be created for a possible implementation of this service in third party applicat
 
 ## Database volume
 
-    -Path: 
+-Path: 
 
-        ~/mongodb-volume
+    ~/mongodb-volume
 
-    -Version:
+-Version:
 
-        -MongoDB 7.0.7 Community(It was the latest version at the time of the project)
+    -MongoDB 7.0.7 Community(It was the latest version at the time of the project)
 
-        -Docker will make an automatic pull of the mongo image in case we don't have it, in case of error execute: docker pull mongo:latest
+    -Docker will make an automatic pull of the mongo image in case we don't have it, in case of error execute: docker pull mongo:latest
 
-    -Description:
+-Description:
 
-        Database changes are persistent.
+    Database changes are persistent.
 
 ## Web server
 
-    -Path: 
+-Path: 
 
-        ~/node-express
+    ~/node-express
 
-    -Version:
+-Version:
 
-        -Node.js v20.11.1
+    -Node.js v20.11.1
 
-    Description:
+Description:
 
-        Server in charge of receiving information from the NVD, making changes to the mongodb and sending this information to the user.
+    Server in charge of receiving information from the NVD, making changes to the mongodb and sending this information to the user.
 
-        To access the information, a request must be made to port 3000. 
+    To access the information, a request must be made to port 3000. 
 
 ## API Requests:
 
@@ -92,10 +92,10 @@ be created for a possible implementation of this service in third party applicat
     https://localhost:3000/update-db
 
 
-## Versión
+## Version
 
     v1.0
 
-## Autor
+## Author
 
     Ignacio Botella Lledin

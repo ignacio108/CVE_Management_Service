@@ -14,11 +14,11 @@ aplicaciones de terceros.
 
 ## Requisitos:
 
-    Crear un .env con las siguientes varibles de entorno:
+Crear un .env con las siguientes varibles de entorno:
 
-    Es necesario obtener un API-KEY a traves del siguiente url:
+Es necesario obtener un API-KEY a traves del siguiente url:
 
-    https://nvd.nist.gov/developers/request-an-api-key
+https://nvd.nist.gov/developers/request-an-api-key
 
     PERSONAL_NVD_API_KEY
     MONGO_INITDB_ROOT_USERNAME
@@ -31,24 +31,24 @@ aplicaciones de terceros.
 
 ## Volumen base de datos
 
-    -Path: 
-        ~/mongodb-volume
-    -Version:
-        -MongoDB 7.0.7 Community(Era la versión de la latest en el momento en el que se realizo el proyecto)
-        -Docker nos hara un pull automático de la imagen de mongo en caso de no tenerla, en caso de error ejecutar: docker pull mongo:latest
-    -Descripción:
-        Los cambios en la base de datos son persistentes
+-Path: 
+    ~/mongodb-volume
+-Version:
+    -MongoDB 7.0.7 Community(Era la versión de la latest en el momento en el que se realizo el proyecto)
+    -Docker nos hara un pull automático de la imagen de mongo en caso de no tenerla, en caso de error ejecutar: docker pull mongo:latest
+-Descripción:
+    Los cambios en la base de datos son persistentes
     
 
 ## Servidor web
 
-    -Path: 
-        ~/node-express
-    -Version:
-        -Node.js v20.11.1
-    -Descripción:
-        Servidor encargado de recibir información de la NVD, realizar cambios en la mongodb y enviar dicha información al usuario.
-        Para acceder a la información se deberá hacer una petición al puerto 3000 
+-Path: 
+    ~/node-express
+-Version:
+    -Node.js v20.11.1
+-Descripción:
+    Servidor encargado de recibir información de la NVD, realizar cambios en la mongodb y enviar dicha información al usuario.
+    Para acceder a la información se deberá hacer una petición al puerto 3000 
 
 ## Peticiones de la API:
 
